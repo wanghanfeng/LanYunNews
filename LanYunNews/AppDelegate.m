@@ -7,16 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "TableBarVC.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic , strong)TableBarVC *rootVC;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    _rootVC = [TableBarVC new];
+    self.window.rootViewController = _rootVC;
+    
+    
     return YES;
 }
 
