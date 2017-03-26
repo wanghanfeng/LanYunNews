@@ -28,13 +28,22 @@
     [btn1 setTitle:@"点我" forState:UIControlStateNormal];
     [btn1 setTitle:@"你点到了" forState:UIControlStateHighlighted];
     btn1.frame = CGRectMake(5, 10, 60, 40);
-    [menuV addSubview:btn1];
-    [self addSubview:menuV];
     [btn1 addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
+    UIView *maskV = [[UIView alloc] initWithFrame:self.bounds];
+    
+    [menuV addSubview:btn1];
+    [self addSubview:maskV];
+    [self addSubview:menuV];
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(maskTap:)];
-    [self addGestureRecognizer:tapGestureRecognizer];
-    [menuV addGestureRecognizer:tapGestureRecognizer];
+    UITapGestureRecognizer *menuVTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(menuVTap)];
+//    [self addGestureRecognizer:tapGestureRecognizer];
+//    [menuV addGestureRecognizer:tapGestureRecognizer];
+    
+    //问题所在：GestureRecognizer 绑定手势事件，并传递给当前View和所有子View
+    
+    [maskV addGestureRecognizer:tapGestureRecognizer];
+    [menuV addGestureRecognizer:menuVTap];
     
     [self printResponder:self];
     [self printResponder:menuV];
@@ -52,6 +61,11 @@
     }
 }
 
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    NSLog(@"x:%f , y:%f",point.x,point.y);
+    return [super hitTest:point withEvent:event];
+}
+
 - (void)btnPressed:(id)sender {
     UIButton *btn = [self viewWithTag:1];
     if (btn == sender) {
@@ -62,11 +76,15 @@
 //    }
 }
 
+- (void)menuVTap {
+    NSLog(@"menuVTap!");
+}
+
 - (void)maskTap:(UITapGestureRecognizer *)sender {
-    UIView *menuV = [self viewWithTag:2];
-    if (menuV == sender.view) {
-        return;
-    }
+//    UIView *menuV = [self viewWithTag:2];
+//    if (menuV == sender.view) {
+//        return;
+//    }
     [self removeFromSuperview];
 }
 @end

@@ -533,15 +533,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LanYunNews/MenuV.m"
-            timestampString = "512185927.35536"
+            timestampString = "512188449.398187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-maskTap:"
             landmarkType = "7">
          </BreakpointContent>
