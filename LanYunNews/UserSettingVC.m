@@ -7,6 +7,7 @@
 //
 
 #import "UserSettingVC.h"
+#import "MenuV.h"
 
 @interface UserSettingVC ()
 
@@ -26,7 +27,8 @@
 }
 
 - (void)rightBtnPressed{
-    NSLog(@"child pressed!");
+    MenuV *menuV = [[MenuV alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:menuV];
 }
 
 @end
