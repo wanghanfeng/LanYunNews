@@ -7,6 +7,10 @@
 //
 
 #import "MenuV.h"
+#import "Masonry.h"
+
+@interface MenuV()
+@end
 
 @implementation MenuV
 
@@ -20,7 +24,8 @@
 }
 
 - (void)addMenu{
-    UIView *menuV = [[UIView alloc] initWithFrame:CGRectMake(10, 0, self.bounds.size.width-20, 67)];
+//    UIView *menuV = [[UIView alloc] initWithFrame:CGRectMake(10, 0, self.bounds.size.width-20, 67)];
+    UIView *menuV = [[UIView alloc] init];
     menuV.tag = 2;
     menuV.backgroundColor = [UIColor whiteColor];
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -31,9 +36,32 @@
     [btn1 addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
     UIView *maskV = [[UIView alloc] initWithFrame:self.bounds];
     
-    [menuV addSubview:btn1];
+//    [menuV addSubview:btn1];
     [self addSubview:maskV];
     [self addSubview:menuV];
+    
+    [menuV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.mas_top).offset(-67);
+        make.left.mas_equalTo(self.mas_left).offset(10);
+        make.right.mas_equalTo(self.mas_right).offset(-10);
+        make.height.mas_equalTo(67);
+    }];
+    [menuV.superview layoutIfNeeded];
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        [menuV mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_top);
+            make.left.mas_equalTo(self.mas_left).offset(10);
+            make.right.mas_equalTo(self.mas_right).offset(-10);
+            make.height.mas_equalTo(67);
+        }];
+        [menuV.superview layoutIfNeeded];
+    }];
+
+//    [menuV mas_updateConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.mas_top);
+//    }];
+//    [menuV.superview layoutIfNeeded];
     
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(maskTap:)];
     UITapGestureRecognizer *menuVTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(menuVTap)];

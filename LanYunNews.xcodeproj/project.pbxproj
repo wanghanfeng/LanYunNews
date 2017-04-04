@@ -35,6 +35,7 @@
 		E2E80C771E8653F80019B1E4 /* SettingBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E80C761E8653F80019B1E4 /* SettingBaseVC.m */; };
 		E2E80C7B1E86546B0019B1E4 /* UserSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E80C7A1E86546B0019B1E4 /* UserSettingVC.m */; };
 		E2E80C7F1E865FD80019B1E4 /* MenuV.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E80C7E1E865FD80019B1E4 /* MenuV.m */; };
+		E2E80C821E8B39A70019B1E4 /* SecondVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E80C811E8B39A70019B1E4 /* SecondVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		E2E80C7A1E86546B0019B1E4 /* UserSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingVC.m; sourceTree = "<group>"; };
 		E2E80C7D1E865FD80019B1E4 /* MenuV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuV.h; sourceTree = "<group>"; };
 		E2E80C7E1E865FD80019B1E4 /* MenuV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuV.m; sourceTree = "<group>"; };
+		E2E80C801E8B39A70019B1E4 /* SecondVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondVC.h; sourceTree = "<group>"; };
+		E2E80C811E8B39A70019B1E4 /* SecondVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +352,8 @@
 			children = (
 				E2E80C791E86546B0019B1E4 /* UserSettingVC.h */,
 				E2E80C7A1E86546B0019B1E4 /* UserSettingVC.m */,
+				E2E80C801E8B39A70019B1E4 /* SecondVC.h */,
+				E2E80C811E8B39A70019B1E4 /* SecondVC.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -579,6 +584,7 @@
 				E2E80C7B1E86546B0019B1E4 /* UserSettingVC.m in Sources */,
 				E29B6B1C1E4EB84900F175DA /* ScorllBar.m in Sources */,
 				E2740EB71E7ACCB6000CB399 /* MineCell.m in Sources */,
+				E2E80C821E8B39A70019B1E4 /* SecondVC.m in Sources */,
 				E2DE15441E27BEBE00DA40EA /* ItemTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

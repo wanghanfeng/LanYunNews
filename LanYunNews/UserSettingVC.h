@@ -10,4 +10,6 @@
 
 @interface UserSettingVC : SettingBaseVC
 
+- (void)rightBtnPressed;
+
 @end
