@@ -30,6 +30,7 @@
 //    _secondNaviVC = [[NaviVC alloc] initWithRootViewController:mineVC];
     _secondNaviVC = [[NaviVC alloc] initWithRootViewController:mineVC];
     
+    self.tabBar.backgroundColor = [UIColor whiteColor];
     
     NSArray *viewControllsArr = [[NSArray alloc] initWithObjects:_firstNaviVC,_secondNaviVC, nil];
     

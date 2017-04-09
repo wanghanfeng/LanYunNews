@@ -21,6 +21,7 @@
 		E2237D6E1E265AF100D89D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2237D6C1E265AF100D89D8D /* LaunchScreen.storyboard */; };
 		E2237D791E265AF200D89D8D /* LanYunNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2237D781E265AF200D89D8D /* LanYunNewsTests.m */; };
 		E2237D841E265AF200D89D8D /* LanYunNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2237D831E265AF200D89D8D /* LanYunNewsUITests.m */; };
+		E23A13341E99CB2500493D74 /* AppInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A13331E99CB2500493D74 /* AppInfoVC.m */; };
 		E2740EB31E7A92C4000CB399 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E2740EB21E7A92C4000CB399 /* MineVC.m */; };
 		E2740EB71E7ACCB6000CB399 /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2740EB51E7ACCB6000CB399 /* MineCell.m */; };
 		E2740EB81E7ACCB6000CB399 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2740EB61E7ACCB6000CB399 /* MineCell.xib */; };
@@ -83,6 +84,8 @@
 		E2237D7F1E265AF200D89D8D /* LanYunNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LanYunNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2237D831E265AF200D89D8D /* LanYunNewsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LanYunNewsUITests.m; sourceTree = "<group>"; };
 		E2237D851E265AF200D89D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E23A13321E99CB2500493D74 /* AppInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoVC.h; sourceTree = "<group>"; };
+		E23A13331E99CB2500493D74 /* AppInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoVC.m; sourceTree = "<group>"; };
 		E2740EB11E7A92C4000CB399 /* MineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		E2740EB21E7A92C4000CB399 /* MineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		E2740EB41E7ACCB6000CB399 /* MineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 				E2E80C7A1E86546B0019B1E4 /* UserSettingVC.m */,
 				E2E80C801E8B39A70019B1E4 /* SecondVC.h */,
 				E2E80C811E8B39A70019B1E4 /* SecondVC.m */,
+				E23A13321E99CB2500493D74 /* AppInfoVC.h */,
+				E23A13331E99CB2500493D74 /* AppInfoVC.m */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -567,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E29B6B221E4EC33500F175DA /* NaviVC.m in Sources */,
+				E23A13341E99CB2500493D74 /* AppInfoVC.m in Sources */,
 				E2E80C7F1E865FD80019B1E4 /* MenuV.m in Sources */,
 				E2E80C771E8653F80019B1E4 /* SettingBaseVC.m in Sources */,
 				E29B6B1F1E4EC2B800F175DA /* TableBarVC.m in Sources */,

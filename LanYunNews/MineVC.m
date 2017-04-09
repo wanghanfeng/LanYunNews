@@ -10,6 +10,9 @@
 #import "Masonry.h"
 #import "MineCell.h"
 #import "UserSettingVC.h"
+#import "AppInfoVC.h"
+
+#define HFLog(str, ...) NSLog(@" --- %s --- , --- %@ --- , --- %@ --- ",__func__,NSStringFromSelector(_cmd),[NSString stringWithFormat:(str),##__VA_ARGS__])
 
 @interface MineVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -85,11 +88,11 @@
             image = [UIImage imageNamed:@"btn_user_selected"];
             break;
         case 3:
-            content = @"跟帖";
+            content = @"App启动次数";
             image = [UIImage imageNamed:@"btn_user_selected"];
             break;
         case 4:
-            content = @"意见反馈";
+            content = @"清理缓存";
             image = [UIImage imageNamed:@"btn_user_selected"];
             break;
             
@@ -116,12 +119,34 @@
     NSInteger row = indexPath.row;
     
     switch (row) {
-        case 0:{
+        case 0: {
             UserSettingVC *userSettingVC = [[UserSettingVC alloc] init];
             [self.navigationController pushViewController:userSettingVC animated:YES];
         }
             break;
-            
+        
+        case 3: {
+            AppInfoVC *appInfoVC = [[AppInfoVC alloc] init];
+            [self.navigationController pushViewController:appInfoVC animated:YES];
+            break;
+        }
+        
+        case 4: {
+            NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+            HFLog(path);
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            NSArray *allFiles = [fileManager contentsOfDirectoryAtPath:path error:nil];
+            for (NSString *file in allFiles) {
+                NSString *filePath = [path stringByAppendingPathComponent:file];
+                if ([fileManager isDeletableFileAtPath:filePath]) {
+                    NSError *error;
+                    [fileManager removeItemAtPath:filePath error:&error];
+                    if (error) {
+                        NSLog(@"%@", error);
+                    }
+                }
+            }
+        }
         default:
             break;
     }

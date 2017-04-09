@@ -12,6 +12,8 @@
 
 #import "HFReachabilityManager.h"
 
+#define HFLog(str, ...) NSLog(@" --- %s --- , --- %@ --- , --- %@ --- ",__func__,NSStringFromSelector(_cmd),[NSString stringWithFormat:(str),##__VA_ARGS__])
+
 @implementation HFNK
 
 
@@ -24,7 +26,7 @@
         
         NSString *path = [NSString stringWithFormat:@"%ld.plist", (unsigned long)[url hash]];
         NSString *path_doc = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-        
+        HFLog(path_doc);
         id result = [NSKeyedUnarchiver unarchiveObjectWithFile:[path_doc stringByAppendingPathComponent:path]];
 //        [KVNProgress showErrorWithStatus:@"无法连接网络"];
         success(result);
@@ -63,6 +65,7 @@
                 NSString *path_doc = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
                 // 归档
                 [NSKeyedArchiver archiveRootObject:responseObject toFile:[path_doc stringByAppendingPathComponent:path]];
+                HFLog(path_doc);
                 success(responseObject);
             }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

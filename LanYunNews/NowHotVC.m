@@ -88,14 +88,14 @@
     if (!_NewItemTB) {
         
         _NewItemTB = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 1, 1) style:UITableViewStylePlain];
-        
+        NSInteger tabBarHeight = self.tabBarController.tabBar.bounds.size.height;
         [self.view addSubview:_NewItemTB];
         [_NewItemTB mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.top.equalTo(self.scrollBar.mas_bottom);
             make.top.equalTo(self.scrollBar.mas_bottom);
             make.left.equalTo(self.view.mas_left);
             make.right.equalTo(self.view.mas_right);
-            make.bottom.equalTo(self.view.mas_bottom);
+            make.bottom.equalTo(self.view.mas_bottom).offset(-tabBarHeight);
         }];
         
     }

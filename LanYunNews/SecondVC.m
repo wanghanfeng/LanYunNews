@@ -30,7 +30,10 @@
 }
 
 - (void)btnPressed {
-    [self.superVC rightBtnPressed];
+    if (self.superVC) {
+        [self.superVC rightBtnPressed];
+    }
+//    NSBundle *bundle = [NSBundle ]
 }
 
 @end
