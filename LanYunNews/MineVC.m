@@ -135,16 +135,20 @@
             NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
             HFLog(path);
             NSFileManager *fileManager = [NSFileManager defaultManager];
-            NSArray *allFiles = [fileManager contentsOfDirectoryAtPath:path error:nil];
+            NSError *error;
+            NSArray *allFiles = [fileManager contentsOfDirectoryAtPath:path error:&error];
             for (NSString *file in allFiles) {
                 NSString *filePath = [path stringByAppendingPathComponent:file];
                 if ([fileManager isDeletableFileAtPath:filePath]) {
-                    NSError *error;
                     [fileManager removeItemAtPath:filePath error:&error];
                     if (error) {
                         NSLog(@"%@", error);
                     }
                 }
+            }
+            if (!error) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"成功" message:@"清理完成" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+                [alert show];
             }
         }
         default:

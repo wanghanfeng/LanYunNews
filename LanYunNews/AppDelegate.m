@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "TableBarVC.h"
+#import "BDAppStatistics.h"
 
 @interface AppDelegate ()
 @property (nonatomic , strong)TableBarVC *rootVC;
@@ -44,6 +45,9 @@
             [fileManager createFileAtPath:absolutePath contents:[@"0" dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
         }
     });
+    
+    [[BDAppStatistics sharedInstance] setAppID:@"123456"];
+    [[BDAppStatistics sharedInstance] recordAppUseCountWithURL:@"http://v.juhe.cn/toutiao/index" navigationController:_rootVC.viewControllers[0]];
     
     return YES;
 }
