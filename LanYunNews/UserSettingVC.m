@@ -28,6 +28,13 @@
     [self.view addSubview:button];
     [button setTitle:@"点我" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(btnPressed) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIScrollView *view = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 300, 400)];
+    UIViewController *viewVC = [[UIViewController alloc] init];
+    viewVC.view.backgroundColor = [UIColor blueColor];
+    viewVC.view.frame = CGRectMake(0, 0, 200, 300);
+    [view addSubview:viewVC.view];
+    [self.view addSubview:view];
 }
 
 

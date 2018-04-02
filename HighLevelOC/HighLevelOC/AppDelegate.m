@@ -1,53 +1,22 @@
 //
 //  AppDelegate.m
-//  LanYunNews
+//  HighLevelOC
 //
-//  Created by whf on 17/1/11.
+//  Created by whf on 17/6/10.
 //  Copyright © 2017年 apple. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "TableBarVC.h"
-#import "BDAppStatistics.h"
 
 @interface AppDelegate ()
-@property (nonatomic , strong)TableBarVC *rootVC;
+
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    _rootVC = [TableBarVC new];
-    self.window.rootViewController = _rootVC;
-    
-    dispatch_queue_t queue;
-    queue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_async(queue, ^{
-        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        NSString *fileName = [NSString stringWithFormat:@"%ld",[@"app launch" hash]];
-        NSString *absolutePath = [path stringByAppendingPathComponent:fileName];
-        
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        if ([fileManager fileExistsAtPath:absolutePath]) {
-            NSString *launchCount = [NSString stringWithContentsOfFile:absolutePath encoding:NSUTF8StringEncoding error:nil];
-            if (launchCount && launchCount.length) {
-                NSInteger count = [launchCount integerValue];
-                count ++;
-                launchCount = [NSString stringWithFormat:@"%ld",count];
-                NSFileHandle *fh = [NSFileHandle fileHandleForWritingAtPath:absolutePath];
-                [fh writeData:[launchCount dataUsingEncoding:NSUTF8StringEncoding]];
-                [fh closeFile];
-            }
-        } else {
-            [fileManager createFileAtPath:absolutePath contents:[@"0" dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
-        }
-    });
-    [[BDAppStatistics sharedInstance] setAppID:@"123456"];
-    [[BDAppStatistics sharedInstance] recordAppUseCountWithURL:@"http://v.juhe.cn/toutiao/index" navigationController:_rootVC.viewControllers[0]];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
