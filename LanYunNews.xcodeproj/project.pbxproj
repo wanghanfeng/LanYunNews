@@ -38,6 +38,7 @@
 		E2237D791E265AF200D89D8D /* LanYunNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2237D781E265AF200D89D8D /* LanYunNewsTests.m */; };
 		E2237D841E265AF200D89D8D /* LanYunNewsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2237D831E265AF200D89D8D /* LanYunNewsUITests.m */; };
 		E23A13341E99CB2500493D74 /* AppInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E23A13331E99CB2500493D74 /* AppInfoVC.m */; };
+		E25AD5DF20722D3400DBDBFD /* duer_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E25AD5DE20722D3400DBDBFD /* duer_back@3x.png */; };
 		E2740EB31E7A92C4000CB399 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E2740EB21E7A92C4000CB399 /* MineVC.m */; };
 		E2740EB71E7ACCB6000CB399 /* MineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2740EB51E7ACCB6000CB399 /* MineCell.m */; };
 		E2740EB81E7ACCB6000CB399 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2740EB61E7ACCB6000CB399 /* MineCell.xib */; };
@@ -136,6 +137,7 @@
 		E2237D851E265AF200D89D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E23A13321E99CB2500493D74 /* AppInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppInfoVC.h; sourceTree = "<group>"; };
 		E23A13331E99CB2500493D74 /* AppInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppInfoVC.m; sourceTree = "<group>"; };
+		E25AD5DE20722D3400DBDBFD /* duer_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "duer_back@3x.png"; sourceTree = "<group>"; };
 		E2740EB11E7A92C4000CB399 /* MineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		E2740EB21E7A92C4000CB399 /* MineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		E2740EB41E7ACCB6000CB399 /* MineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineCell.h; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 		E2237D5D1E265AF100D89D8D /* LanYunNews */ = {
 			isa = PBXGroup;
 			children = (
+				E25AD5DD20722D2600DBDBFD /* Resourses */,
 				E20287911E27195000258889 /* Resources */,
 				E202878B1E27188500258889 /* Classes */,
 				E2237D5E1E265AF100D89D8D /* Supporting Files */,
@@ -450,6 +453,14 @@
 				E2237D851E265AF200D89D8D /* Info.plist */,
 			);
 			path = LanYunNewsUITests;
+			sourceTree = "<group>";
+		};
+		E25AD5DD20722D2600DBDBFD /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				E25AD5DE20722D3400DBDBFD /* duer_back@3x.png */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 		E29B6B191E4EB52D00F175DA /* Component  */ = {
@@ -637,6 +648,7 @@
 				E2237D6E1E265AF100D89D8D /* LaunchScreen.storyboard in Resources */,
 				E2237D6B1E265AF100D89D8D /* Assets.xcassets in Resources */,
 				E2237D691E265AF100D89D8D /* Main.storyboard in Resources */,
+				E25AD5DF20722D3400DBDBFD /* duer_back@3x.png in Resources */,
 				E2740EB81E7ACCB6000CB399 /* MineCell.xib in Resources */,
 				E2DE15451E27BEBE00DA40EA /* ItemTableCell.xib in Resources */,
 			);

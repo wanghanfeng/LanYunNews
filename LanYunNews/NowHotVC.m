@@ -63,6 +63,18 @@
     [_NewItemTB registerNib:cellNib1 forCellReuseIdentifier:@"ItemTableCell"];
     
     [self.NewItemTB.mj_header beginRefreshing];
+    
+    UIImageView *view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    view.image = [UIImage imageNamed:@"duer_back"];
+    view.center = self.view.center;
+    view.backgroundColor = [UIColor blueColor];
+    view.layer.cornerRadius = 5.;
+    [self.view addSubview:view];
+}
+
+- (void)loadView {
+    [super loadView];
+    NSLog(@"loadView %s",__func__);
 }
 
 - (void)didReceiveMemoryWarning {
