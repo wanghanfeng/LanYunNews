@@ -75,6 +75,7 @@
 - (void)loadView {
     [super loadView];
     NSLog(@"loadView %s",__func__);
+//dasdkashdkhaskdhaskhdkjashdjk
 }
 
 - (void)didReceiveMemoryWarning {
